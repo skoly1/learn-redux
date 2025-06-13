@@ -18,6 +18,9 @@ import {
   decrement,
   incrementByAmount,
   reset,
+  INCREMENT,
+  DECREMENT,
+  INCREMENT_BY_AMOUNT,
 } from "../store/slices/counterSlice";
 
 // Import selectors
@@ -79,7 +82,7 @@ const Counter: React.FC = () => {
    * Dispatches the increment action
    */
   const handleIncrement = () => {
-    dispatch(increment()); // Dispatch action with no payload
+    dispatch({ type: INCREMENT }); 
   };
 
   /**
@@ -97,7 +100,8 @@ const Counter: React.FC = () => {
   const handleIncrementByAmount = () => {
     const amount = parseInt(incrementAmount, 10);
     if (!isNaN(amount)) {
-      dispatch(incrementByAmount(amount)); // Dispatch action with payload
+      // dispatch(incrementByAmount(amount)); // Dispatch action with payload
+      dispatch({ type: INCREMENT_BY_AMOUNT, payload: amount });
     }
   };
 

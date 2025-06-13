@@ -16,6 +16,7 @@ import type { RootState } from "./store";
 import Counter from "./components/Counter";
 import TodoApp from "./components/TodoApp";
 import "./App.css";
+import Test from "./components/Test";
 
 function App() {
   // Example of accessing Redux state at the app level
@@ -119,6 +120,7 @@ function App() {
       <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         {/* Counter Example */}
         <Counter />
+        <Test />
 
         {/* Todo App Example */}
         <TodoApp />
